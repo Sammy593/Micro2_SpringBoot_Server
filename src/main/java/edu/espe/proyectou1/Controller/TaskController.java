@@ -24,6 +24,11 @@ public class TaskController {
         return taskService.save(task);
     }
 
+    @GetMapping(value = "/listTask")
+    public List<Task> listTask() {
+        return taskService.findAll();
+    }
+
     @GetMapping(value = "/listTasksByProject/{id}")
     public List<Task> listTasksByProject(@PathVariable String id) {
         return taskService.findAllByProject(id);

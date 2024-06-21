@@ -18,7 +18,9 @@ public class Project {
     private String state;
     private String idLeader;
 
-    public Project(String id, String name, String description, Date startDate, Date endDate, String state, String idLeader) {
+    public Project(String name, String description, Date startDate,
+                   Date endDate, String state, String idLeader,
+                   Double progress) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
@@ -26,5 +28,6 @@ public class Project {
         this.endDate = endDate;
         this.state = state;
         this.idLeader = idLeader;
+        this.progress = 0.0;
     }
 }
